@@ -1,8 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using PortFolioTracker.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<MvcPortFolioContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MvcPortFolioContext")));
 
 var app = builder.Build();
 

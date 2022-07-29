@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTracker\\PortFolioTracker.csproj": {}
+    "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTrackerTest\\PortFolioTrackerTest.csproj": {}
   },
   "projects": {
-    "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTracker\\PortFolioTracker.csproj": {
+    "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTrackerTest\\PortFolioTrackerTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTracker\\PortFolioTracker.csproj",
-        "projectName": "PortFolioTracker",
-        "projectPath": "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTracker\\PortFolioTracker.csproj",
+        "projectUniqueName": "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTrackerTest\\PortFolioTrackerTest.csproj",
+        "projectName": "PortFolioTrackerTest",
+        "projectPath": "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTrackerTest\\PortFolioTrackerTest.csproj",
         "packagesPath": "C:\\Users\\Neha Jain\\.nuget\\packages\\",
-        "outputPath": "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTracker\\obj\\",
+        "outputPath": "C:\\Project-Keeper\\PortFolioTracker\\PortFolioTrackerTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Neha Jain\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,17 +40,25 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Microsoft.AspNetCore.TestHost": {
               "target": "Package",
               "version": "[6.0.7, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[17.1.0, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "coverlet.collector": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[3.1.2, )"
             }
           },
           "imports": [
@@ -64,9 +72,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
