@@ -34,12 +34,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="PASSWORD" class="control-label"></label>
-                <input asp-for="PASSWORD" class="form-control" />
+                <input asp-for="PASSWORD" type="password" class="form-control" />
                 <span asp-validation-for="PASSWORD" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="STATUS" class="control-label"></label>
-                <input asp-for="STATUS" class="form-control" />
+                <select asp-for="STATUS" class="form-control" asp-items="@ViewBag.Status"/>
                 <span asp-validation-for="STATUS" class="text-danger"></span>
             </div>
             <div class="form-group">

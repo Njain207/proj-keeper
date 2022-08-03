@@ -11,5 +11,7 @@ namespace PortFolioTracker.Models
             : base(options)
         { }
         public virtual DbSet<Login>? Logins { get; set; }
+
+       
     }
 }

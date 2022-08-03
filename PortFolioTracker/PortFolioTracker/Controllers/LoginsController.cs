@@ -47,6 +47,12 @@ namespace PortFolioTracker.Controllers
         // GET: Logins/Create
         public IActionResult Create()
         {
+            ViewBag.Status = new List<SelectListItem>
+            {
+            new SelectListItem { Value = "0", Text = "False" },
+            new SelectListItem { Value = "1", Text = "True" },
+             };
+             
             return View();
         }
 
