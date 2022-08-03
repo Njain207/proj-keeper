@@ -46,12 +46,7 @@ namespace PortFolioTracker.Controllers
 
         // GET: Logins/Create
         public IActionResult Create()
-        {
-            ViewBag.Status = new List<SelectListItem>
-            {
-            new SelectListItem { Value = "0", Text = "False" },
-            new SelectListItem { Value = "1", Text = "True" },
-             };
+        {      
              
             return View();
         }
@@ -61,7 +56,7 @@ namespace PortFolioTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,FIRSTNAME,MIDDLENAME,LASTNAME,USERNAME,PASSWORD,STATUS")] Login login)
+        public async Task<IActionResult> Create([Bind("ID,FIRSTNAME,MIDDLENAME,LASTNAME,USEREMAIL,USERNAME,PASSWORD,STATUS")] Login login)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +88,7 @@ namespace PortFolioTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,FIRSTNAME,MIDDLENAME,LASTNAME,USERNAME,PASSWORD,STATUS")] Login login)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,FIRSTNAME,MIDDLENAME,LASTNAME,USEREMAIL,USERNAME,PASSWORD,STATUS")] Login login)
         {
             if (id != login.ID)
             {
@@ -153,7 +148,9 @@ namespace PortFolioTracker.Controllers
             var login = await _context.Logins.FindAsync(id);
             if (login != null)
             {
-                _context.Logins.Remove(login);
+                // _context.Logins.Remove(login);
+                login.STATUS = false;
+                _context.Update(login);
             }
             
             await _context.SaveChangesAsync();

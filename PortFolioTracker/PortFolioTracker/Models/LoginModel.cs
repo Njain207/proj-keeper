@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PortFolioTracker.Models
 {
-    [Table("Login")]
+    
     public class Login
     {
         [Key]
@@ -20,7 +20,7 @@ namespace PortFolioTracker.Models
         public string? USEREMAIL { get; set; }
         [Required]
         public string? PASSWORD { get; set; }
-        public DateTime? LOGIN_TIMESTAMP { get; set; }
+        public DateTime LOGIN_TIMESTAMP { get; set; } = DateTime.Now;
         public DateTime LASTPASSWORDCHANGE { get; set; } = DateTime.Now;
         public int COUNTER { get; set; } = 0;
         [Required]
